@@ -1,0 +1,29 @@
+{
+  "name": "qaguru-pw-diploma-stv-public",
+  "version": "1.0.0",
+  "description": "Дипломный проект для курса QAGuru Playwright. Тесты для рабочего проекта stavka.tv. Ge,kbxyst ntcns",
+  "main": "index.js",
+  "scripts": {    
+    "allureGenerate": "allure generate --clean",
+    "allureOpen": "allure open",
+    "debug": "npx playwright test --ui",
+    "test": "npx playwright test"
+},
+  "keywords": [],
+  "author": "kvyat8",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@faker-js/faker": "^9.2.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.9.0",
+    "allure-playwright": "^3.0.7",
+    "eslint": "^9.17.0",
+    "globals": "^15.13.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2"
+  }
+}
