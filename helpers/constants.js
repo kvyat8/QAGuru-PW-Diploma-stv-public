@@ -6,5 +6,6 @@ export const capperUser = {
   slug: 'avtotest-interfeis'
 }
 
-export const apiUrl = 'https://v2dev.stavka.tv/api/v2'
+export const baseUrl = `https://v2dev.stavka.tv/`
+export const apiUrl = `${baseUrl}api/v2`
 export const sportsArray = ['soccer', 'ice-hockey', 'tennis', 'basketball']
