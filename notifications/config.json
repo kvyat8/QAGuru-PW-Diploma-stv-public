@@ -2,8 +2,8 @@
     "base": {
       "logo": "",
       "project": "stv-public",
-      "environment": "",
-      "comment": "",
+      "environment": "dev",
+      "comment": "Прогон автотесто UI и API",
       "reportLink": "",
       "language": "en",
       "allureFolder": "allure-report",
@@ -12,8 +12,8 @@
       "customData": {}
     },
     "telegram": {
-      "token": "7849991075:AAHv6J16lBR5ZjB9F46pGE58HkqOoZCMI5U",
-      "chat": "-4617180281",
+      "token": "${process.env.TG_TOKEN}",
+      "chat": "${process.env.TG_CHAT}",
       "replyTo": ""
     }
   }
