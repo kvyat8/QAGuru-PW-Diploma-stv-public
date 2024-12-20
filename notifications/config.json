@@ -1,0 +1,19 @@
+{
+    "base": {
+      "logo": "",
+      "project": "stv-public",
+      "environment": "",
+      "comment": "",
+      "reportLink": "",
+      "language": "en",
+      "allureFolder": "allure-report",
+      "enableChart": true,
+      "enableSuitesPublishing": false,
+      "customData": {}
+    },
+    "telegram": {
+      "token": "7849991075:AAHv6J16lBR5ZjB9F46pGE58HkqOoZCMI5U",
+      "chat": "-4617180281",
+      "replyTo": ""
+    }
+  }

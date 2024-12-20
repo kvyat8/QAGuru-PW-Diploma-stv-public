@@ -7,7 +7,8 @@
     "allureGenerate": "allure generate --clean",
     "allureOpen": "allure open",
     "debug": "npx playwright test --ui",
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "tgreport": "allure generate --clean && java -DconfigFile=notifications/config.json -jar notifications/allure-notifications-4.8.0.jar"
 },
   "keywords": [],
   "author": "kvyat8",

@@ -1,10 +1,8 @@
 import { test as base } from '@playwright/test'
 import { PageManager } from '../src/pageObject/page.manager'
 import { ApiClient } from '../src/apiServices/api.client'
-import { capperUser } from './constants'
+import { capperUser, baseUrl } from './constants'
 import { step } from 'allure-js-commons'
-
-const baseUrl = 'https://v2dev.stavka.tv/'
 
 export const test = base.extend({
   pm: async ({ page }, use) => {
@@ -51,6 +49,7 @@ export const test = base.extend({
     const api = new ApiClient()
     await use(api)
   },
+
   apiAuth: async ({}, use) => {
     const api = new ApiClient()
     let token = await api.profileService.getAuthToken()
