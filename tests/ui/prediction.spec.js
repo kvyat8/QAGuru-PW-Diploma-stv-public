@@ -2,7 +2,7 @@ import { PredictionTextBuilder } from '../../helpers/builders'
 import { test, expect, step } from '../../helpers/fixtures'
 
 test.describe('Прогнозы', () => {
-  test('Создание прогноза', async ({ disablePromo, pm, capperLogin }) => {
+  test('Создание прогноза', { tag: ['@UI'] }, async ({ disablePromo, pm, capperLogin }) => {
     const prediction = new PredictionTextBuilder().addText().addNewText().setMatchNumber().generate()
 
     await pm.mainPage.openTopMatchCardByNumber(prediction.matchNumber)
@@ -16,7 +16,7 @@ test.describe('Прогнозы', () => {
     })
   })
 
-  test('Редактирование прогноза сразу после создания', async ({ disablePromo, pm, capperLogin }) => {
+  test('Редактирование прогноза сразу после создания', { tag: ['@UI'] }, async ({ disablePromo, pm, capperLogin }) => {
     const prediction = new PredictionTextBuilder().addText().addNewText().setMatchNumber().generate()
 
     await pm.mainPage.openTopMatchCardByNumber(prediction.matchNumber)
@@ -30,7 +30,7 @@ test.describe('Прогнозы', () => {
     })
   })
 
-  test('Редактирование прогноза на странице матча', async ({ disablePromo, pm, capperLogin }) => {
+  test('Редактирование прогноза на странице матча', { tag: ['@UI'] }, async ({ disablePromo, pm, capperLogin }) => {
     const prediction = new PredictionTextBuilder().addText().addNewText().setMatchNumber().generate()
 
     await pm.mainPage.openTopMatchCardByNumber(prediction.matchNumber)

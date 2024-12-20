@@ -4,7 +4,7 @@ import { PredictionTextBuilder } from '../../helpers/builders'
 let date = new Date().toLocaleDateString('en-ca')
 
 test.describe('API Прогнозы', () => {
-  test('API Создание прогноза POST', async ({ api }) => {
+  test('API Создание прогноза POST', { tag: ['@API'] }, async ({ api }) => {
     let prediction = new PredictionTextBuilder().addText().generate()
 
     const match = await api.matchService.getRandomMatch(date)
@@ -18,7 +18,7 @@ test.describe('API Прогнозы', () => {
     })
   })
 
-  test('API Редактирование прогноза PUT', async ({ api }) => {
+  test('API Редактирование прогноза PUT', { tag: ['@API'] }, async ({ api }) => {
     let prediction = new PredictionTextBuilder().addText().addNewText().generate()
 
     const match = await api.matchService.getRandomMatch(date)

@@ -4,7 +4,7 @@ import { PredictionTextBuilder } from '../../helpers/builders'
 let date = new Date().toLocaleDateString('en-ca')
 
 test.describe('API Комментарии', () => {
-  test('API Создание комментария на матч POST', async ({ apiAuth, api }) => {
+  test('API Создание комментария на матч POST', { tag: ['@API'] }, async ({ apiAuth, api }) => {
     let comment = new PredictionTextBuilder().addText().generate()
     let token = await api.profileService.getAuthToken()
 
@@ -17,7 +17,7 @@ test.describe('API Комментарии', () => {
     })
   })
 
-  test('API Редактирование комментария на матч PUT', async ({ api }) => {
+  test('API Редактирование комментария на матч PUT', { tag: ['@API'] }, async ({ api }) => {
     let comment = new PredictionTextBuilder().addText().addNewText().generate()
     let token = await api.profileService.getAuthToken()
     const match = await api.matchService.getRandomMatch(date)
@@ -33,7 +33,7 @@ test.describe('API Комментарии', () => {
     })
   })
 
-  test('Удаление комментария на матч DELETE', async ({ api }) => {
+  test('Удаление комментария на матч DELETE', { tag: ['@API'] }, async ({ api }) => {
     let comment = new PredictionTextBuilder().addText().generate()
     let token = await api.profileService.getAuthToken()
 

@@ -3,7 +3,7 @@ import { capperUser } from '../../helpers/constants'
 import { test, expect, step } from '../../helpers/fixtures'
 
 test.describe('Профиль', () => {
-  test('Регистрация нового юзера', async ({ disablePromo, pm }) => {
+  test('Регистрация нового юзера', { tag: ['@UI'] }, async ({ disablePromo, pm }) => {
     const newUser = new UserBuilder().addFirstName().addSecondName().addEmail().addPassword().generate()
     await pm.header.openRegisterPopup()
 
@@ -13,7 +13,7 @@ test.describe('Профиль', () => {
     await expect(pm.authModal.registerModal.registrationConfirm).toContainText(`${newUser.email}`)
   })
 
-  test('Авторизация с корректными данными', async ({ disablePromo, pm }) => {
+  test('Авторизация с корректными данными', { tag: ['@UI'] }, async ({ disablePromo, pm }) => {
     await pm.header.openLoginPopup()
     await pm.authModal.loginInModal(capperUser.email, capperUser.password)
     await expect(pm.header.userName).toContainText(`${capperUser.firstName} ${capperUser.secondName}`)

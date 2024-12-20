@@ -8,6 +8,8 @@
     "allureOpen": "allure open",
     "debug": "npx playwright test --ui",
     "test": "npx playwright test",
+    "api":"npx playwright test --grep api",
+    "ui":"npx playwright test --grep api",
     "tgreport": "allure generate --clean && java -DconfigFile=notifications/config.json -jar notifications/allure-notifications-4.8.0.jar"
 },
   "keywords": [],
